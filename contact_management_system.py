@@ -1,6 +1,5 @@
 import datetime
 
-
 class Contact:
     def __init__(self, name, phone):
         self.name = name
@@ -14,8 +13,7 @@ class Contact:
 
     def get_phone(self):
         return self.phone
-
-
+        
 class CallHistory:
     def __init__(self):
         self.call_logs = []
@@ -85,28 +83,28 @@ class ContactApp:
 
     def run(self):
         while True:
-            print("\nAdvanced Contact Management System")
-            print("1. Add Contact")
-            print("2. Delete Contact")
-            print("3. Search by Letter")
-            print("4. Call Contact")
-            print("5. View Call History")
+            print("\n <-ADVANCED CONTACT MANAGEMENT SYSTEM ->\n")
+            print("1. ADD CONTACT:")
+            print("2. DELETE CONTACT:")
+            print("3. SEARCH BY LETTER OF NAME:")
+            print("4. CALL CONTACT:")
+            print("5. VIEW CALL HISTORY:")
             print("6. Exit")
 
-            choice = input("Enter your choice: ")
+            choice = input("ENTER THE CHOICE OF USER: ")
 
             if choice == '1':
-                name = input("Enter contact name: ")
-                phone = input("Enter phone number: ")
+                name = input("ENTER CONTACT NAME OF PERSON: ")
+                phone = input("ENTER THE PHONE NUMBER: ")
                 self.cms.add_contact(name, phone)
             elif choice == '2':
-                name = input("Enter contact name to delete: ")
+                name = input("ENTER THE CONTACT NAME TO DELETE: ")
                 self.cms.delete_contact(name)
             elif choice == '3':
-                letter = input("Enter the letter to search by: ")
+                letter = input("ENTER THE LETTER TO SEARCH: ")
                 self.cms.search_by_letter(letter)
             elif choice == '4':
-                name = input("Enter contact name to call: ")
+                name = input("ENTER CONTACT NAME TO WHOM WANT TO CALL: ")
                 self.cms.call_contact(name)
             elif choice == '5':
                 self.cms.display_call_history()
@@ -114,7 +112,7 @@ class ContactApp:
                 print("Exiting the system.")
                 break
             else:
-                print("Invalid choice, please try again.")
+                print("Invalid choice:")
 
 if __name__ == "__main__":
     app = ContactApp()
