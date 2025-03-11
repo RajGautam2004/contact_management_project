@@ -117,3 +117,4 @@ class ContactApp:
 if __name__ == "__main__":
     app = ContactApp()
     app.run()
+    print("running\n")
